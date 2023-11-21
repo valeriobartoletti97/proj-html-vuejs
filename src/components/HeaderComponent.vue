@@ -4,14 +4,48 @@
         <div id="top-header">
             <div class="my-container d-flex justify-content-between align-items-center">
                 <!-- language -->
-                <div>
-                    <div @click="toggleShow" class="position-relative">
+                <div class="left-top-header">
+                    <div @click="toggleShow(el)" class="position-relative">
                         <span class="me-2">English</span>
                         <i class="fa-solid fa-angle-down"></i>
                         <div class="position-absolute my-dropdown" :class="show ? 'show' : 'd-none'">
                             <div>Italian</div>
                             <div>Deutsch</div>
                         </div>
+                    </div>
+                </div>
+                <div class="right-top-header d-flex justify-content-center align-items-center">
+                    <!-- list cpourses and pages -->
+                    <div>
+                        <ul class="d-flex flex-row align-items-center">
+                            <li>Courses</li>
+                            <li class="position-relative"><span>
+                                CoursesFormats
+                                </span>
+                               <!--  <ul class="position-absolute my-dropdown d-none">
+                                    <li>Italian</li>
+                                    <li>Deutsch</li>
+                                </ul>  -->
+                            </li>
+                            <!-- courseformat dropdown menu -->
+                            <li>Pages</li>
+                            <!-- pages dropdown menu -->
+                            <li>AddCourse</li>
+                            <li>Memberships</li>
+                            <li>Demos</li>
+                            <!-- demos dropdown menu -->
+                        </ul>
+                    </div>
+                    <!-- icons -->
+                    <div class="header-icons d-flex no-wrap">
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-behance"></i>
+                        <i class="fa-solid fa-basketball"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-brands fa-git"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-pinterest"></i>
                     </div>
                 </div>
             </div>
@@ -35,10 +69,9 @@ export default {
         }
     },
     methods:{
-        toggleShow(){
+        toggleShow(el){
             this.show = !this.show
-            console.log(this.show)
-        }
+        },
     }
 }
 </script>
@@ -61,6 +94,17 @@ export default {
         div{
             padding:8px 15px
         }
+    }
+    .header-icons{
+        i{
+            font-size:1.3em;
+            padding: 0 7px;
+        }
+    }
+    li{
+        text-decoration: none;
+        list-style: none;
+        padding:0 10px
     }
 }
 </style>
