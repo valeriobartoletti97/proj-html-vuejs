@@ -26,3 +26,13 @@ body{
 ul,li{
     margin:0
 }
+.my-btn-large{
+    background-color: $blue;
+    padding: 15px 35px;
+    color:white;
+    border-radius: 50px;
+    border: 0;
+    span{
+        font-weight: 600;
+    }
+}

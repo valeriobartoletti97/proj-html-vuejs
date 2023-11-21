@@ -52,7 +52,46 @@
         </div>
         <!-- bottom header -->
         <div id="bottom-header">
-
+            <div class="my-container d-flex justify-content-between align-items-center">
+                <!-- logo -->
+                <div class="me-3">
+                    <img src="/images/MasterStudy_logo.svg" alt="MasterStudy logo">
+                </div>
+                <!-- category -->
+                <div class="header-category-menu me-3">
+                    <i class="fa-solid fa-bars"></i>
+                    <span class="text-uppercase">Category</span>
+                </div>
+                <!-- Searchbar -->
+                <div class="d-flex me-3" id="searchbar">
+                    <input type="text" placeholder="Search courses">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+                </div>
+                <!-- Links -->
+                <div class="d-flex me-3">
+                    <div class="me-3">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <span class="blue-hover">Become an Instructor</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="blue-hover">For Enterprise</span>
+                    </div>
+                </div>
+                <!-- buttons -->
+                <div class="d-flex align-items-center me-3">
+                    <div class="me-3">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="login">Log in</span>
+                    </div>
+                    <button class="my-btn-large me-3">
+                        <span class="text-uppercase">Sign Up</span>
+                    </button>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
         </div>
     </header>
 </template>
@@ -107,4 +146,51 @@ export default {
         padding:0 10px
     }
 }
+#bottom-header{
+    padding:20px 0;
+    font-size: 0.9em;
+    .header-category-menu{
+        color: grey;
+        font-size: 0.9em;
+        span{
+            font-weight: 600;
+            margin-left: 5px;
+        }
+    }
+    input{
+        background-color: $gray;
+        border: 1px solid $gray;
+        width:100%;
+        height: 44px;
+        padding: 20px;
+        display:block
+    }
+    .search-btn{
+        background-color: $blue;
+        color:white;
+        border: 0;
+        padding: 10px 20px;
+    }
+    .fa-solid.fa-bullhorn,.fa-briefcase,.fa-user,.fa-heart{
+    color: $blue;
+    margin-right: 10px;
+    }
+    .blue-hover{
+        font-size: 0.9em;
+    }
+    .blue-hover:hover{
+        color:$blue;
+        cursor: pointer;
+    }
+    .login{
+        color:blue;
+        font-size: 0.9em
+    }
+    .fa-heart.fa-regular{
+        font-size: 2em;
+    }
+    #searchbar{
+        width:600px
+    }
+} 
 </style>
