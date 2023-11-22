@@ -14,6 +14,35 @@
                 </div>
             </div>
         </div>
+        <!-- section stats -->
+        <div id="stats-section">
+            <div class="we-are-proud text-center">
+                <h4 class="mb-3">We are Proud</h4>
+                <p>Certificate courses are instructed by highly educated and qualified instructors who hold doctoral and master’s level degrees.</p>
+            </div>
+            <div class="numbers-stats">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 text-center stat-wrapper">
+                            <span class="d-block stat-number">2000</span>
+                            <span class="text-uppercase stat-object">Students</span>
+                        </div>
+                        <div class="col-3 text-center stat-wrapper">
+                            <span class="d-block stat-number">950</span>
+                            <span class="text-uppercase stat-object">Courses</span>
+                        </div>
+                        <div class="col-3 text-center stat-wrapper">
+                            <span class="d-block stat-number">1600</span>
+                            <span class="text-uppercase stat-object">Hours video</span>
+                        </div>
+                        <div class="col-3 text-center">
+                            <span class="d-block stat-number">150</span>
+                            <span class="text-uppercase stat-object">Countries reached</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- section start business -->
         <div class="my-container d-flex justify-content-between">
             <div class="business-wrapper d-flex align-items-center">
@@ -91,6 +120,39 @@
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
+.stat-wrapper{
+    border-right:1px solid rgb(209, 209, 209);
+}
+.stat-number{
+    font-size: 4.5em;
+    font-weight: 300;
+}
+.stat-object{
+    font-size: 1.3em;
+    font-weight: 300;
+}
+.numbers-stats{
+    height: 440px;
+    width:100%;
+    background-image: url('/images/we_proud.png');
+    background-repeat: no-repeat;
+}
+.we-are-proud{
+    max-width:1000px;
+    margin:0 auto;
+    padding: 100px 0;
+    h4{
+        font-size: 3em;
+        font-weight:300;
+    }
+    p{
+        font-size: 1.2em;
+        font-weight:300;
+    }
+}
+ #stats-section{
+    background-color: #F0F4FA;
+} 
 .read-more-text{
     padding: 150px 0px;
     height:50%;
