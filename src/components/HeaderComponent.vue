@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="overflow-x-hidden">
         <!-- top header -->
         <div id="top-header">
             <div class="my-container d-flex justify-content-between align-items-center">
