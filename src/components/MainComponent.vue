@@ -1,5 +1,32 @@
 <template>
     <main>
+        <!-- section start business -->
+        <div class="my-container d-flex justify-content-between">
+            <div class="business-wrapper d-flex align-items-center">
+                <div class="business-img">
+                    <img src="/images/image_box_1-221x231.png" alt="box-1 image">
+                </div>
+                <div class="business-text ms-5">
+                    <h3>Become an Instructor</h3>
+                    <p>Teach what you love. Masterstudy gives you the tools to create a course.</p>
+                    <button class="my-btn-large">
+                        <span class="text-uppercase">Start teaching</span>
+                    </button>
+                </div>
+            </div>
+            <div class="business-wrapper d-flex align-items-center">
+                <div class="business-img">
+                    <img src="/images/image_box_2-234x231.png" alt="box-1 image">
+                </div>
+                <div class="business-text ms-5">
+                    <h3>Setup For Business</h3>
+                    <p>Get unlimited access to 2,500 of Udemy’s top courses for your team.</p>
+                    <button class="my-btn-large">
+                        <span class="text-uppercase">Doing business</span>
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="position-relative developers-feedbacks">
             <img src="/images/Tim-Sab.jpg" alt="tim-sab">
             <div class="feedback-text position-absolute">
@@ -48,6 +75,38 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/style/partials/variables.scss' as *;
+.business-text{
+    h3{
+    font-size: 2.2em;
+    font-weight: 400
+    }
+    p{
+        font-size:1.2em;
+        font-weight: 300
+    }
+    button{
+        span{
+            font-size: 0.9em
+        }
+    }
+}
+.business-img{
+    min-width:200px;
+    overflow:hidden;
+    img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+.business-wrapper{
+    width:49%;
+    border:1px solid rgb(211, 211, 211);
+    padding: 70px 50px;
+    margin:100px 0;
+    overflow: hidden;
+}
 .developers-feedbacks{
     width:100%;
     height:670px;
