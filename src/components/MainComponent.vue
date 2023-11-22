@@ -43,6 +43,26 @@
                 </div>
             </div>
         </div>
+        <!-- section subscribe -->
+        <div id="subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h5>Subscribe our newsletter</h5>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
+                    </div>
+                    <div class="col-6">
+                        <span class="d-block text-uppercase mail-label mb-3">Your e-mail address</span>
+                        <div class="d-flex flex-nowrap searchbar-newsletter">
+                            <input type="email" placeholder="Enter your e-mail">
+                            <button class="search-btn text-uppercase">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- section start business -->
         <div class="my-container d-flex justify-content-between">
             <div class="business-wrapper d-flex align-items-center">
@@ -120,6 +140,26 @@
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
+#subscribe{
+    padding: 50px 0;
+    background-color: $green;
+    color:white;
+    p{
+        font-size:0.9em
+    }
+    input{
+        width:400px;
+        height: 44px;
+        padding: 20px;
+        display:block
+    }
+    .searchbar-newsletter{
+        font-size:0.9em;
+        button{
+            font-weight: 500;
+        }
+    }
+}
 .stat-wrapper{
     border-right:1px solid rgb(209, 209, 209);
 }

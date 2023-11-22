@@ -165,12 +165,6 @@ export default {
         padding: 20px;
         display:block
     }
-    .search-btn{
-        background-color: $blue;
-        color:white;
-        border: 0;
-        padding: 10px 20px;
-    }
     .fa-solid.fa-bullhorn,.fa-briefcase,.fa-user,.fa-heart{
     color: $blue;
     margin-right: 10px;
