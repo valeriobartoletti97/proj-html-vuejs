@@ -1,5 +1,19 @@
 <template>
     <main>
+        <!-- section read more -->
+        <div id="read-more" class="overflow-y-hidden">
+            <div class="container read-more-text">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Limitless learning, more possibilities</h3>
+                        <p>Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.</p>
+                        <button class="my-btn-large">
+                            <span class="text-uppercase">Read more</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- section start business -->
         <div class="my-container d-flex justify-content-between">
             <div class="business-wrapper d-flex align-items-center">
@@ -27,6 +41,7 @@
                 </div>
             </div>
         </div>
+        <!-- feedbacks section -->
         <div class="position-relative developers-feedbacks">
             <img src="/images/Tim-Sab.jpg" alt="tim-sab">
             <div class="feedback-text position-absolute">
@@ -76,6 +91,24 @@
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
+.read-more-text{
+    padding: 150px 0px;
+    height:50%;
+    h3{
+        font-size: 3em;
+        font-weight:300;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 1.4em;
+        margin-bottom:30px
+    }
+}
+#read-more{
+    width:100%;
+    height:600px;
+    background-image: url('/images/read-me-bg.png');
+}
 .business-text{
     h3{
     font-size: 2.2em;
