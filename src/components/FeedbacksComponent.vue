@@ -6,7 +6,19 @@
 
 <script>
     export default {
-        name:'FeedbacksComponent'
+        name:'FeedbacksComponent',
+        props:{
+            img:String,
+            title:String,
+            text:String,
+            devName:String,
+            devRole:String
+        },
+        data(){
+            return{
+                
+            }
+        }
     }
 </script>
 
