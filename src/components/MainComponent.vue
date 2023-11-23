@@ -1,5 +1,6 @@
 <template>
     <main>
+        <HeroComponent/>
         <!-- section read more -->
         <div id="read-more" class="overflow-y-hidden">
             <div class="container read-more-text">
@@ -105,9 +106,14 @@
 </template>
 
 <script>
+import HeroComponent from './HeroComponent.vue';
+
 
     export default {
         name:'MainComponent',
+        components:{
+    HeroComponent
+},
         data(){
             return{
                 devFeedbacks:[
