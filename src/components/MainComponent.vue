@@ -55,8 +55,8 @@
                     <div class="col-6">
                         <span class="d-block text-uppercase mail-label mb-3">Your e-mail address</span>
                         <div class="d-flex flex-nowrap searchbar-newsletter">
-                            <input type="email" placeholder="Enter your e-mail">
-                            <button class="search-btn text-uppercase">
+                            <input type="email" placeholder="Enter your e-mail" v-model="emailUser">
+                            <button class="search-btn text-uppercase" @click="this.emailUser = ''">
                                 Subscribe
                             </button>
                         </div>
@@ -74,7 +74,7 @@
                 <div class="popular-courses-wrapper mb-4 d-flex overflow-y-hidden overflow-x-hidden flex-shrink-0 flex-grow-0 flex-nowrap">
                     <PopularCoursesCard v-for="(card,index) in this.store.courses" :key="card.id" :img="card.img" :category="card.category" :title="card.title" :oldPrice="card.oldPrice" :price="card.price" :badge="card.badge" />
                 </div>
-                <div class="text-center carousel-buttons">
+                <div class="text-center carousel-buttons mt-5">
                     <button class="prev-button">
                         <i class="fa-solid fa-angle-left"></i>
                     </button>
@@ -160,7 +160,8 @@ import PopularCoursesCard from './PopularCoursesCard.vue';
                         role: 'Product Manager, Apple Inc'
                     },
                 ],
-                store
+                store,
+                emailUser: ''
             }
         }
     }

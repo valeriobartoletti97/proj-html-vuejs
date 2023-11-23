@@ -64,8 +64,8 @@
                 </div>
                 <!-- Searchbar -->
                 <div class="d-flex me-3" id="searchbar">
-                    <input type="text" placeholder="Search courses">
-                    <button class="search-btn">
+                    <input type="text" placeholder="Search courses" v-model="this.search">
+                    <button class="search-btn" @click="this.search = ''">
                         <i class="fa-solid fa-search"></i>
                     </button>
                 </div>
@@ -104,7 +104,8 @@ export default {
     data() {
         return {
             store,
-            show: false
+            show: false,
+            search:'',
         }
     },
     methods:{

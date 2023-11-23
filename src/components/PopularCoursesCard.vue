@@ -52,6 +52,9 @@ img{
     width:100%;
     height: 100%;
 }
+.carousel-img:hover{
+    cursor:pointer;
+}
 .courses-card-description{
     padding: 15px;
     background-color:white;
@@ -78,6 +81,8 @@ img{
 .carousel-img{
     width:100%;
     height:140px;
+    object-fit:cover
+
 }
 .single-curses-card{
     margin:0 10px;
