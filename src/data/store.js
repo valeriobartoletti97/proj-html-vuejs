@@ -2,28 +2,40 @@ import {reactive} from 'vue'
 export const store = reactive ({
     categories:[
         {
-            categoryName:'Art',
-            id: 1
+            img:'cat_1-770x375.jpg',
+            name:'Software Development',
+            id:1,
+            coursesNumber: '4'
         },
         {
-            categoryName:'Exercise',
-            id: 2
+            img:'cat_2-370x155.jpg',
+            name: 'Art',
+            id:2,
+            coursesNumber: '8'
         },
         {
-            categoryName:'Material Design',
-            id: 3
+            img:'cat_3-370x155.jpg',
+            name:'Material Design',
+            id:3,
+            coursesNumber: '4'
         },
         {
-            categoryName:'Music',
-            id: 4
+            img:'cat_4-370x155.jpg',
+            name:'Music',
+            id:4,
+            coursesNumber: '5'
         },
         {
-            categoryName:'Photography',
-            id: 5
+            img:'cat_5-370x155.jpg',
+            name:'Exercise',
+            id:5,
+            coursesNumber: '7'
         },
         {
-            categoryName:'Software Development',
-            id: 6
+            img:'cat_6-370x155.jpg',
+            name:'Photography',
+            id:6,
+            coursesNumber: '4'
         },
-    ]
+    ],
 });

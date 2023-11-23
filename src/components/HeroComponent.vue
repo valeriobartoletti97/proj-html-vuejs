@@ -22,13 +22,13 @@
     </div>
   </div>
   <div class="container course-card-wrapper">
-    <div class="row flex-nowrap justify-content-center">
-        <div class="col-4 course-card me-5">
+    <div class="row flex-nowrap">
+        <div class="col-4 course-card me-3">
             <i class="fa-solid fa-earth-europe d-block mb-4"></i>
             <h5 class="mb-4">Worldwide Trends</h5>
             <p>Our services and collections adhere to cutting-edge solutions in the design world.</p>
         </div>
-        <div class="col-4 course-card me-5">
+        <div class="col-4 course-card me-3">
             <i class="fa-solid fa-desktop d-block mb-4"></i>
             <h5 class="mb-4">Complex Online Education</h5>
             <p>We have everything for effective learning and delivery of assignments by students.</p>
@@ -40,16 +40,60 @@
         </div>
     </div>
   </div>
+  <div class="hero-card-wrapper">
+    <div class="container">
+        <div class="row mb-4 flex-wrap">
+            <div class="col-8 course-big">
+                <HeroCardComponent :img="this.store.categories[0].img" :title="this.store.categories[0].name" :courseNumber="this.store.categories[0].coursesNumber"/>
+            </div>
+            <div class="col-4">
+                <div class="double-card">
+                    <HeroCardComponent :img="this.store.categories[1].img" :title="this.store.categories[1].name" :courseNumber="this.store.categories[1].coursesNumber"/>
+                </div>
+                <div>
+                    <HeroCardComponent :img="this.store.categories[2].img" :title="this.store.categories[2].name" :courseNumber="this.store.categories[2].coursesNumber"/>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4" v-for="(card,index) in lastCategories" :key="card.id">
+                <HeroCardComponent :img="card.img" :title="card.name" :courseNumber="card.coursesNumber"/>
+            </div>
+        </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import {store} from '../data/store'
+import HeroCardComponent from './HeroCardComponent.vue';
     export default {
-        name:'HeroComponent'
-    }
+    name: "HeroComponent",
+    components: { HeroCardComponent },
+    data() {
+        return {
+            store
+        };
+    },
+    computed: {
+        lastCategories() {
+            return this.store.categories.filter(item => item.id > 3);
+        }
+    },
+}
 </script>
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
+.hero-card-wrapper{
+    margin-bottom: 100px;
+    .double-card{
+        margin-bottom:28px
+    }
+    img{
+        width:100%;
+    }
+}
 .fa-earth-europe,.fa-desktop,.fa-calendar-check{
     color: $blue;
     font-size: 3.5em
