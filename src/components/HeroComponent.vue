@@ -15,21 +15,61 @@
                     <img src="/images/book2.png" alt="book" class="position-absolute book-2">
                     <img src="/images/book1.png" alt="book" class="position-absolute book-1">
                     <img src="/images/magnifier.png" alt="magnifier" class="position-absolute magnifier">
+                    <img src="/images/bubblespeech.png" alt="magnifier" class="position-absolute bubblespeech">
                 </div>
             </div>
+        </div>
+    </div>
+  </div>
+  <div class="container course-card-wrapper">
+    <div class="row flex-nowrap justify-content-center">
+        <div class="col-4 course-card me-5">
+            <i class="fa-solid fa-earth-europe d-block mb-4"></i>
+            <h5 class="mb-4">Worldwide Trends</h5>
+            <p>Our services and collections adhere to cutting-edge solutions in the design world.</p>
+        </div>
+        <div class="col-4 course-card me-5">
+            <i class="fa-solid fa-desktop d-block mb-4"></i>
+            <h5 class="mb-4">Complex Online Education</h5>
+            <p>We have everything for effective learning and delivery of assignments by students.</p>
+        </div>
+        <div class="col-4 course-card">
+            <i class="fa-solid fa-calendar-check d-block mb-4"></i>
+            <h5 class="mb-4">Brand certificate</h5>
+            <p>After completing the course, you will receive a certificate confirming your knowledge.</p>
         </div>
     </div>
   </div>
 </template>
 
 <script>
-
     export default {
         name:'HeroComponent'
     }
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/style/partials/variables.scss' as *;
+.fa-earth-europe,.fa-desktop,.fa-calendar-check{
+    color: $blue;
+    font-size: 3.5em
+}
+.course-card{
+    background-color: #F0F4FA;
+    padding:30px;
+    font-weight:300;
+    margin-bottom: 100px;
+    h5{
+        font-size:1.1em
+    }
+    p{
+        font-size:0.9em;
+    }
+}
+.bubblespeech{
+    right:7%;
+    top:15%
+}
 .magnifier{
     bottom:24%;
     right:12%
