@@ -64,6 +64,26 @@
                 </div>
             </div>
         </div>
+        <!-- section carousel -->
+        <div id="courses">
+            <div class="my-container">
+                <div class="text-center courses-description mb-5">
+                    <h2 class="mb-4">Popular courses</h2>
+                    <span class="courses-subtitle">Discover our most popular courses for self learning</span>
+                </div>
+                <div class="popular-courses-wrapper mb-4 d-flex overflow-y-hidden overflow-x-hidden flex-shrink-0 flex-grow-0 flex-nowrap">
+                    <PopularCoursesCard v-for="(card,index) in this.store.courses" :key="card.id" :img="card.img" :category="card.category" :title="card.title" :oldPrice="card.oldPrice" :price="card.price" :badge="card.badge" />
+                </div>
+                <div class="text-center carousel-buttons">
+                    <button class="prev-button">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </button>
+                    <button class="next-button">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- section start business -->
         <div class="my-container d-flex justify-content-between">
             <div class="business-wrapper d-flex align-items-center">
@@ -73,7 +93,7 @@
                 <div class="business-text ms-5">
                     <h3>Become an Instructor</h3>
                     <p>Teach what you love. Masterstudy gives you the tools to create a course.</p>
-                    <button class="my-btn-large">
+                    <button class="my-btn-large hover-green">
                         <span class="text-uppercase">Start teaching</span>
                     </button>
                 </div>
@@ -85,7 +105,7 @@
                 <div class="business-text ms-5">
                     <h3>Setup For Business</h3>
                     <p>Get unlimited access to 2,500 of Udemy’s top courses for your team.</p>
-                    <button class="my-btn-large">
+                    <button class="my-btn-large hover-green">
                         <span class="text-uppercase">Doing business</span>
                     </button>
                 </div>
@@ -107,12 +127,13 @@
 
 <script>
 import HeroComponent from './HeroComponent.vue';
-
-
+import {store} from '../data/store'
+import PopularCoursesCard from './PopularCoursesCard.vue';
     export default {
         name:'MainComponent',
         components:{
-    HeroComponent
+    HeroComponent,
+    PopularCoursesCard
 },
         data(){
             return{
@@ -138,7 +159,8 @@ import HeroComponent from './HeroComponent.vue';
                         text:'It is no exaggeration to say this MasterStudy experience was transformative–both professionally and personally. This workshop will long remain a high point of my life. Thanks again…. I am feeling energized and eager to start teaching my class next week. I can’t wait to use all of my new teaching tools. I will absolutely recommend this workshop to other educators!',
                         role: 'Product Manager, Apple Inc'
                     },
-                ]
+                ],
+                store
             }
         }
     }
@@ -146,6 +168,28 @@ import HeroComponent from './HeroComponent.vue';
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
+.prev-button,.next-button{
+    border:1px solid rgb(201, 201, 201);
+    padding:10px 17px;
+    color: rgb(173, 173, 173);
+    background-color:white
+}
+.prev-button:hover,.next-button:hover{
+    background-color: blue;
+    transition-duration: 0.5s;
+}
+#courses{
+    background-color:#F0F4FA;
+    padding:100px 0;
+    h2{
+        font-size:3em;
+        font-weight: 300;
+    }
+    .courses-subtitle{
+        font-size:1.1em;
+        font-weight: 300
+    }
+}
 #subscribe{
     padding: 50px 0;
     background-color: $green;

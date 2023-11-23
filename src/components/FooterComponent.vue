@@ -88,6 +88,12 @@
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
+.footer-icons:hover{
+    cursor:pointer;
+}
+.blog-card:hover{
+    cursor:pointer
+}
 footer{
     font-size:0.8em;
     h3{

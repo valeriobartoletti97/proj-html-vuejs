@@ -109,6 +109,11 @@ import HeroCardComponent from './HeroCardComponent.vue';
     p{
         font-size:0.9em;
     }
+    transition-duration: 0.4s;
+    
+}
+.course-card:hover{
+    transform: translateY(-15px)
 }
 .bubblespeech{
     right:7%;

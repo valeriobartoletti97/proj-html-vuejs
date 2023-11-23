@@ -54,7 +54,7 @@
         <div id="bottom-header">
             <div class="my-container d-flex justify-content-between align-items-center">
                 <!-- logo -->
-                <div class="me-3">
+                <div class="me-3 logo-img">
                     <img src="/images/MasterStudy_logo.svg" alt="MasterStudy logo">
                 </div>
                 <!-- category -->
@@ -117,12 +117,22 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables.scss' as *;
-
+@media only screen and (max-width: 1200px){
+.logo-img{
+    display:none
+}
+}
+.login:hover{
+    cursor:pointer;
+}
 #top-header {
     color: gray;
     padding:20px 0;
     font-size: 0.8em;
     border-bottom: 1px solid $gray;
+    div:hover{
+        cursor:pointer;
+    }
     .my-dropdown{
         top:200%;
         left:0;
@@ -139,6 +149,12 @@ export default {
             font-size:1.3em;
             padding: 0 7px;
         }
+        i:hover{
+            cursor:pointer
+        }
+    }
+    .fa-user:hover{
+        cursor:pointer
     }
     li{
         text-decoration: none;

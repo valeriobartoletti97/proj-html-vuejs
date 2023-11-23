@@ -36,6 +36,14 @@ ul,li{
         font-weight: 600;
     }
 }
+.my-btn-large:hover{
+   background-color:rgb(26, 51, 134);
+   transition-duration: 0.5s;
+}
+.hover-green:hover{
+    background-color:#4ed7a8;
+    transition-duration: 0.3s;
+}
 .search-btn{
     background-color: $blue;
     color:white;
